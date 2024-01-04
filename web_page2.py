@@ -1,0 +1,23 @@
+import streamlit as st
+
+def web_page2():
+    st.title('Информация о наборе данных:')
+    st.header("Тематика датасета: описание рейсов самолётов")
+    st.header("Описание признаков:")
+    st.write("id - номер рейса")
+    st.write("airline - название компании перевозчика")
+    st.write("flight - номер полёта")
+    st.write("airportFrom - место вылета")
+    st.write("airportTo - место прилёта")
+    st.write("dayOfWeek - день недели вылета")
+    st.write("time - время полёта")
+    st.write("lingth - длина полёта")
+    st.write("delay - был ли задержан рейс")
+    st.header("Особенности предобработки данных:")
+    st.write("На основе данных датасэта нужно предсказать был ли задержан рейс")
+    st.write("1 в столбце delay значит, что рейс задержали")
+    st.write("Если равно 0, то самолёт отправился по расписанию")
+    st.write("Для столбцов airportFrom и airportTo был проведён OrdinalEncoder")
+    st.write("Для столбца airline - OneHotEncoder")
+    st.write("Были удалены все строчки с пропущенными значениями")
+    st.write("И проведена балансировка классов")
